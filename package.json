@@ -1,0 +1,19 @@
+{
+  "name": "cosmos-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write src/**/*.{js,jsx}"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.2"
+  }
+}
