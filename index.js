@@ -18,17 +18,17 @@ async function test() {
   let bonded = await staking.validators('bonded')
   let validator = bonded[0]
 
-  let delegations = await staking.delegations(validator.operator_address)
-  let unbondingDelegations = await staking.unbondingDelegations(
+  validator.delegations = await staking.delegations(validator.operator_address)
+  validator.unbonding_delegations = await staking.unbondingDelegations(
     validator.operator_address
   )
-  let distrib = await distribution.validator(validator.operator_address)
-  let rewards = await distribution.rewards(validator.operator_address)
-  let outstandingRewards = await distribution.outstandingRewards(validator.operator_address)
+  validator.distribution = await distribution.validator(validator.operator_address)
+  validator.rewards = await distribution.rewards(validator.operator_address)
+  validator.outstanding_rewards = await distribution.outstandingRewards(validator.operator_address)
 
-  let account = await auth.accounts(distrib.operator_address)
-  let sign = await slashing.signingInfo(validator.consensus_pubkey)
-  console.log(sign)
+  validator.account = await auth.accounts(validator.distribution.operator_address)
+  validator.signing_info = await slashing.signingInfo(validator.consensus_pubkey)
+  console.log(validator)
 }
 
 test()
