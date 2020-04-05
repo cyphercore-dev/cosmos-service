@@ -1,11 +1,11 @@
 require('dotenv').config()
-const validators = require('./src/validators');
+const staking = require('./src/staking');
 
 
 async function main () {
-  let bonded = await validators.get('bonded');
-  let unbonded = await validators.get('unbonded');
-  let unbonding = await validators.get('unbonding');
+  let bonded = await staking.validators('bonded');
+  let unbonded = await staking.validators('unbonded');
+  let unbonding = await staking.validators('unbonding');
   let all = [...bonded, ...unbonded, ...unbonding]
   console.log(all.length);
 
