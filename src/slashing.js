@@ -15,5 +15,5 @@ function signingInfo(publicKey) {
 
 module.exports = {
   signingInfos,
-  signingInfo
+  signingInfo,
 }

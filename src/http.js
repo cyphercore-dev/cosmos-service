@@ -12,8 +12,24 @@ const httpsAgent = new https.Agent({
   maxSockets: MAX_CONCURRENT,
 })
 
-module.exports = axios.create({
+const client = axios.create({
   httpAgent,
   httpsAgent,
   baseURL: process.env.COSMOS_URL,
 })
+
+client.interceptors.response.use(
+  function (response) {
+    return response
+  },
+  function (error) {
+    console.log(error)
+    return {
+      data: {
+        result: null,
+      },
+    }
+  }
+)
+
+module.exports = client
