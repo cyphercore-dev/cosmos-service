@@ -21,5 +21,5 @@ function unboundingDelegations(address) {
 module.exports = {
   validators,
   delegations,
-  unboundingDelegations
+  unboundingDelegations,
 }
