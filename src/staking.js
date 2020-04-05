@@ -1,6 +1,6 @@
 const http = require('./http')
 
-function get(stauts) {
+function validators(stauts) {
   return http
     .get(`staking/validators?status=${stauts}`)
     .then((res) => res.data.result)
@@ -12,22 +12,14 @@ function delegations(address) {
     .then((res) => res.data.result)
 }
 
-function unbounding(address) {
+function unboundingDelegations(address) {
   return http
     .get(`staking/validators/${address}/unbounding_delegations`)
     .then((res) => res.data.result)
 }
 
-function distribution(address) {
-  return http
-    .get(`/distribution/validators/${address}`)
-    .then((res) => res.data.result)
-}
-
 module.exports = {
-  get,
+  validators,
   delegations,
-  unbounding,
-  unbounding,
-  distribution
+  unboundingDelegations
 }

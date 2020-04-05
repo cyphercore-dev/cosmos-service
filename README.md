@@ -1,3 +1,3 @@
 # cosmos-service
 
-JavaScript interface for cosmos API
+JavaScript interface for Cosmos API
