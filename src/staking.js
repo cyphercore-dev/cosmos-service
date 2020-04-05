@@ -12,14 +12,14 @@ function delegations(address) {
     .then((res) => res.data.result)
 }
 
-function unboundingDelegations(address) {
+function unbondingDelegations(address) {
   return http
-    .get(`staking/validators/${address}/unbounding_delegations`)
+    .get(`staking/validators/${address}/unbonding_delegations`)
     .then((res) => res.data.result)
 }
 
 module.exports = {
   validators,
   delegations,
-  unboundingDelegations,
+  unbondingDelegations,
 }
