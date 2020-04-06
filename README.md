@@ -2,6 +2,15 @@
 
 This library is a low level interface to Cosmos Hub API in JavaScript. It is a minimum wrapper over REST, and provides mechanism to define custom error handler, and maximum number of concurrent connections. It is suitable for getting large amounts of data from Blockchain.
 
+## Usage
+
+Create `.env` file in your project root.
+
+```
+COSMOS_URL=YOUR-COSMOS-HUB-NODE
+```
+
+
 ## Examples
 
 Get detailed info of a validator

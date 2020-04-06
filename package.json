@@ -6,9 +6,15 @@
   "scripts": {
     "format": "prettier --write *.{js,jsx} src/**/*.{js,jsx}"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyphercore-dev/cosmos-service.git"
+  },
+  "keywords": [
+    "cosmos",
+    "javascript"
+  ],
+  "author": "Artem Akatev",
   "dependencies": {
     "axios": "^0.19.2",
     "dotenv": "^8.2.0"
