@@ -8,7 +8,6 @@ function blocks(height = 'latest') {
   return http.get(`/blocks/${height}`)
 }
 
-
 function validatorsets(height = 'latest') {
   return http.get(`/validatorsets/${height}`)
 }

@@ -9,15 +9,15 @@ function proposer(id) {
 }
 
 function deposits(id, depositor = null) {
-  if(depositor) {
-    return http.get(`/gov/proposals/${id}/deposits/${depositor}`)  
+  if (depositor) {
+    return http.get(`/gov/proposals/${id}/deposits/${depositor}`)
   }
   return http.get(`/gov/proposals/${id}/deposits`)
 }
 
 function votes(id, voter = null) {
-  if(voter) {
-    return http.get(`/gov/proposals/${id}/votes/voter`)  
+  if (voter) {
+    return http.get(`/gov/proposals/${id}/votes/voter`)
   }
   return http.get(`/gov/proposals/${id}/votes`)
 }
@@ -46,5 +46,5 @@ module.exports = {
   tally,
   deposit,
   tallying,
-  voting
+  voting,
 }
