@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write *.{js,jsx} src/**/*.{js,jsx}"
+    "format": "prettier --write *.{js,jsx} src/**/*.{js,jsx}",
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
