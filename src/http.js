@@ -20,7 +20,7 @@ const client = axios.create({
 
 client.interceptors.response.use(
   function (response) {
-    return response
+    return response.data.result
   },
   function (error) {
     console.log(error)

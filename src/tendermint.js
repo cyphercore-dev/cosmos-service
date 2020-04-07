@@ -1,16 +1,16 @@
 const http = require('./http')
 
 function syncing() {
-  return http.get(`/syncing`).then((res) => res.data.result)
+  return http.get(`/syncing`)
 }
 
 function blocks(height = 'latest') {
-  return http.get(`/blocks/${height}`).then((res) => res.data.result)
+  return http.get(`/blocks/${height}`)
 }
 
 
 function validatorsets(height = 'latest') {
-  return http.get(`/validatorsets/${height}`).then((res) => res.data.result)
+  return http.get(`/validatorsets/${height}`)
 }
 
 module.exports = {

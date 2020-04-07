@@ -1,7 +1,7 @@
 const http = require('./http')
 
 function accounts(address) {
-  return http.get(`/auth/accounts/${address}`).then((res) => res.data.result)
+  return http.get(`/auth/accounts/${address}`)
 }
 
 module.exports = {
